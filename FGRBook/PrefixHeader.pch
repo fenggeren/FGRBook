@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  FGRBook
+//
+//  Created by fenggeren on 2016/10/10.
+//  Copyright © 2016年 fenggeren. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "FGRGlobalFunction.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+BWMExtension.h"
+#import "UIView+Sizes.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+
+#define BookrackAddBookNoti @"BookrackAddBookNoti"  // 添加书到书架
+#define NovelDownloadCompleteNoti @"NovelDownloadCompleteNoti" // 指定书 下载完毕
+#define FGRReadTextShowChangeNoti @"FGRReadTextShowChangeNoti" // 文字显示变化
+
+#define kUMengKey @"57fba284e0f55a65d0002f0d"
+
+#define kADAppID @"ca-app-pub-2913362937746827~8986877593"
+#define kADBannerID @"ca-app-pub-2913362937746827/2940343999"
+#define kADInterstitialID @"ca-app-pub-2913362937746827/2253856397"
+
+#define BQG_BASE_URL @"http://www.biquge.com/"
+
+#define kDefaultPlaceholder @"default"
+
+#define kInterstitialADShowDuration 60 * 10
+
+#define kDefaultAnimationDuration UINavigationControllerHideShowBarDuration
+
+
+#endif /* PrefixHeader_pch */

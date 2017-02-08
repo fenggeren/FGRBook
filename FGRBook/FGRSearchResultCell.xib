@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FGRSearchResultCell" rowHeight="80" id="KGk-i7-Jjw" customClass="FGRSearchResultCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TAy-gp-FMb">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="Zpn-QJ-SuI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-Ks-pw6">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKa-mQ-VA7">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qKa-mQ-VA7" firstAttribute="bottom" secondItem="TAy-gp-FMb" secondAttribute="bottom" id="0ma-NV-WkN"/>
+                    <constraint firstItem="hpq-Ks-pw6" firstAttribute="top" secondItem="TAy-gp-FMb" secondAttribute="top" id="4Rx-Jm-bUg"/>
+                    <constraint firstItem="TAy-gp-FMb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="AyJ-ZJ-pgR"/>
+                    <constraint firstItem="hpq-Ks-pw6" firstAttribute="leading" secondItem="TAy-gp-FMb" secondAttribute="trailing" constant="8" id="FvU-oY-Bp3"/>
+                    <constraint firstItem="qKa-mQ-VA7" firstAttribute="leading" secondItem="TAy-gp-FMb" secondAttribute="trailing" constant="8" id="Q6b-CS-gWH"/>
+                    <constraint firstItem="TAy-gp-FMb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jTw-VV-vvY"/>
+                    <constraint firstAttribute="bottom" secondItem="TAy-gp-FMb" secondAttribute="bottom" constant="8" id="xXz-ie-NJ2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ivIcon" destination="TAy-gp-FMb" id="wLi-ta-5kx"/>
+                <outlet property="lblAuthor" destination="qKa-mQ-VA7" id="k6f-hE-p0k"/>
+                <outlet property="lblName" destination="hpq-Ks-pw6" id="aZo-0a-hcZ"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="-9"/>
+        </tableViewCell>
+    </objects>
+</document>

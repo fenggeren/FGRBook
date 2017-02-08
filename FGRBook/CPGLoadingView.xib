@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CPGLoadingView">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="37"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiazai-1-8" translatesAutoresizingMaskIntoConstraints="NO" id="aIU-3t-CDR"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiazai-2-8" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-BZ-OF0"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiazai-3-8" translatesAutoresizingMaskIntoConstraints="NO" id="Mo9-Uh-VHs"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiazai-4-8" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-co-aaW"/>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Mo9-Uh-VHs" firstAttribute="leading" secondItem="CqT-BZ-OF0" secondAttribute="trailing" constant="-6" id="5tX-bx-2GV"/>
+                <constraint firstAttribute="bottom" secondItem="aIU-3t-CDR" secondAttribute="bottom" id="5xQ-Gy-F6Q"/>
+                <constraint firstItem="aIU-3t-CDR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HIZ-5r-qOu"/>
+                <constraint firstItem="iSg-co-aaW" firstAttribute="leading" secondItem="Mo9-Uh-VHs" secondAttribute="trailing" constant="-6" id="JMF-hE-YuY"/>
+                <constraint firstItem="CqT-BZ-OF0" firstAttribute="leading" secondItem="aIU-3t-CDR" secondAttribute="trailing" constant="-6" id="NTh-G8-RIA"/>
+                <constraint firstAttribute="trailing" secondItem="aIU-3t-CDR" secondAttribute="trailing" id="PKm-va-DO1"/>
+                <constraint firstItem="Mo9-Uh-VHs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cIN-pG-UWs"/>
+                <constraint firstAttribute="bottom" secondItem="aIU-3t-CDR" secondAttribute="bottom" id="fiS-xJ-vXq"/>
+                <constraint firstAttribute="trailing" secondItem="iSg-co-aaW" secondAttribute="trailing" id="klb-pV-oXl"/>
+                <constraint firstItem="aIU-3t-CDR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nZK-ch-w5J"/>
+                <constraint firstItem="aIU-3t-CDR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nyz-hv-MKK"/>
+                <constraint firstItem="aIU-3t-CDR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pB4-v4-ff2"/>
+                <constraint firstItem="iSg-co-aaW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="r1y-fP-Ng9"/>
+                <constraint firstItem="aIU-3t-CDR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sdQ-Hp-x9C"/>
+                <constraint firstItem="CqT-BZ-OF0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tYO-9l-4fL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="PKm-va-DO1"/>
+                    <exclude reference="fiS-xJ-vXq"/>
+                    <exclude reference="pB4-v4-ff2"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="img1" destination="aIU-3t-CDR" id="Tis-ET-Rha"/>
+                <outlet property="img2" destination="CqT-BZ-OF0" id="gXq-Ck-Kyd"/>
+                <outlet property="img3" destination="Mo9-Uh-VHs" id="ttq-pD-XiY"/>
+                <outlet property="img4" destination="iSg-co-aaW" id="oNe-0A-fi5"/>
+            </connections>
+            <point key="canvasLocation" x="374" y="439.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jiazai-1-8" width="37" height="37"/>
+        <image name="jiazai-2-8" width="37" height="37"/>
+        <image name="jiazai-3-8" width="37" height="37"/>
+        <image name="jiazai-4-8" width="37" height="37"/>
+    </resources>
+</document>

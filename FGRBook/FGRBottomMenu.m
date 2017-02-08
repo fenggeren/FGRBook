@@ -1,0 +1,115 @@
+//
+//  FGRBottomMenu.m
+//  CollectionViewAutoScroll
+//
+//  Created by HuanaoGroup on 16/11/1.
+//  Copyright © 2016年 HuanaoGroup. All rights reserved.
+//
+
+#import "FGRBottomMenu.h"
+
+
+@interface FGRBottomMenu ()
+
+@property (nonatomic, strong) NSArray<UIView *> *views;
+
+@end
+
+
+@implementation FGRBottomMenu
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+    }
+    return self;
+}
+
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGFloat width = floor(self.bounds.size.width / self.views.count);
+    CGFloat height = self.bounds.size.height;
+    CGFloat maxX = 0;
+    for (UIView *v in self.views) {
+        v.frame = CGRectMake(maxX, 0, width, height);
+        maxX += width;
+    }
+}
+
+
+#pragma mark -
+
+- (void)setDelegate:(id<FGRBottomMenuProtocol>)delegate
+{
+    _delegate = delegate;
+    for (UIView *v in self.subviews) {
+        [v removeFromSuperview];
+    }
+    [self config];
+}
+
+- (void)config
+{
+    NSArray<UIView *> *views = [self.delegate viewsInBottomMenu:self];
+    for (UIView *v in views) {
+        [self addSubview:v];
+    }
+    self.views = views;
+}
+
+
+- (void)show
+{
+    [self layoutIfNeeded];
+    if ([self.delegate respondsToSelector:@selector(showAnimationForBottomMenu:)]) {
+        [self.delegate showAnimationForBottomMenu:self]();
+    } else {
+        self.frame = [self.delegate originalFrameForBottomMenu:self];
+        [UIView animateWithDuration:[self.delegate showAnimationIntervalForBottomMenu:self] animations:^{
+            self.frame = [self.delegate showFrameForBottomMenu:self];
+        }];
+    }
+}
+
+- (void)dismissComplete:(dispatch_block_t)block
+{
+    if ([self.delegate respondsToSelector:@selector(dismissAnimationForBottomMenu:)]) {
+        [self.delegate dismissAnimationForBottomMenu:self]();
+    } else { 
+        [UIView animateWithDuration:[self.delegate showAnimationIntervalForBottomMenu:self] animations:^{
+            self.frame = [self.delegate originalFrameForBottomMenu:self];
+        } completion:^(BOOL finished) {
+            if (block) {
+                block();
+            }
+        }];
+    }
+}
+
+- (BOOL)isShow
+{
+    return CGRectEqualToRect(self.frame, [self.delegate showFrameForBottomMenu:self]);
+}
+
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

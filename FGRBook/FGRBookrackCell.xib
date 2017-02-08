@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FGRBookrackCell" id="gTV-IL-0wX" customClass="FGRBookrackCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-wk-hW5">
+                        <rect key="frame" x="8" y="4" width="64" height="91"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小说名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcM-s8-jnz">
+                        <rect key="frame" x="8" y="103" width="64" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已读99.9%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-px-TOR">
+                        <rect key="frame" x="8" y="123" width="55" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR2-zy-NEY">
+                        <rect key="frame" x="8" y="4" width="64" height="91"/>
+                        <connections>
+                            <action selector="clickEdit:" destination="gTV-IL-0wX" eventType="touchUpInside" id="38v-nY-y9D"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5G-gm-h6i">
+                        <rect key="frame" x="41" y="64" width="23" height="23"/>
+                        <state key="normal" image="checkNormal">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" image="checkSelect"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="UcM-s8-jnz" firstAttribute="width" secondItem="f3q-wk-hW5" secondAttribute="width" id="4l8-JB-I9X"/>
+                <constraint firstItem="HR2-zy-NEY" firstAttribute="bottom" secondItem="f3q-wk-hW5" secondAttribute="bottom" id="9UP-B6-5WT"/>
+                <constraint firstItem="9cH-px-TOR" firstAttribute="leading" secondItem="UcM-s8-jnz" secondAttribute="leading" id="Bej-Ba-WKL"/>
+                <constraint firstItem="9cH-px-TOR" firstAttribute="top" secondItem="UcM-s8-jnz" secondAttribute="bottom" constant="3" id="HRT-fm-J5P"/>
+                <constraint firstItem="f3q-wk-hW5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="L8T-6L-TnG"/>
+                <constraint firstAttribute="trailing" secondItem="f3q-wk-hW5" secondAttribute="trailing" constant="8" id="LvI-jQ-NAB"/>
+                <constraint firstItem="D5G-gm-h6i" firstAttribute="trailing" secondItem="f3q-wk-hW5" secondAttribute="trailing" constant="-8" id="Lwd-BP-RYq"/>
+                <constraint firstItem="HR2-zy-NEY" firstAttribute="top" secondItem="f3q-wk-hW5" secondAttribute="top" id="NCH-1D-psr"/>
+                <constraint firstItem="f3q-wk-hW5" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.55" id="Vew-gN-15P"/>
+                <constraint firstItem="D5G-gm-h6i" firstAttribute="bottom" secondItem="f3q-wk-hW5" secondAttribute="bottom" constant="-8" id="ZOp-2H-fSj"/>
+                <constraint firstItem="HR2-zy-NEY" firstAttribute="trailing" secondItem="f3q-wk-hW5" secondAttribute="trailing" id="bAw-Vw-LKj"/>
+                <constraint firstItem="HR2-zy-NEY" firstAttribute="leading" secondItem="f3q-wk-hW5" secondAttribute="leading" id="kSn-Yj-EC7"/>
+                <constraint firstItem="f3q-wk-hW5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="rWU-va-rFh"/>
+                <constraint firstItem="UcM-s8-jnz" firstAttribute="top" secondItem="f3q-wk-hW5" secondAttribute="bottom" constant="8" id="teA-sE-jtP"/>
+                <constraint firstItem="UcM-s8-jnz" firstAttribute="leading" secondItem="f3q-wk-hW5" secondAttribute="leading" id="vva-gB-raT"/>
+            </constraints>
+            <size key="customSize" width="99" height="179"/>
+            <connections>
+                <outlet property="btnSelect" destination="D5G-gm-h6i" id="eEp-rJ-cCn"/>
+                <outlet property="coverAlpha" destination="HR2-zy-NEY" id="Voc-qW-UJe"/>
+                <outlet property="iconView" destination="f3q-wk-hW5" id="xOc-5z-cZ5"/>
+                <outlet property="lblName" destination="UcM-s8-jnz" id="xA2-06-SF5"/>
+                <outlet property="lblPercentReaded" destination="9cH-px-TOR" id="tXh-4U-ykS"/>
+            </connections>
+            <point key="canvasLocation" x="-404" y="1"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkNormal" width="23" height="23"/>
+        <image name="checkSelect" width="23" height="23"/>
+        <image name="default" width="75" height="100"/>
+    </resources>
+</document>

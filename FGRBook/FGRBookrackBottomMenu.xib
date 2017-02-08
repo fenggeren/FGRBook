@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="r4Q-3V-8un" customClass="FGRBookrackBottomMenu">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVk-oc-N2q">
+                    <rect key="frame" x="0.0" y="0.0" width="171" height="65"/>
+                    <state key="normal" title="下载" image="download">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="r4Q-3V-8un" eventType="touchUpInside" id="lBr-RV-9z7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-Nv-VRk">
+                    <rect key="frame" x="171" y="0.5" width="171" height="65"/>
+                    <state key="normal" title="删除" image="delete">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="r4Q-3V-8un" eventType="touchUpInside" id="KBh-mh-oeZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9xY-Nv-VRk" firstAttribute="centerY" secondItem="r4Q-3V-8un" secondAttribute="centerY" id="4dF-y5-QcW"/>
+                <constraint firstItem="9xY-Nv-VRk" firstAttribute="width" secondItem="oVk-oc-N2q" secondAttribute="width" id="7qG-WU-SNo"/>
+                <constraint firstAttribute="bottom" secondItem="oVk-oc-N2q" secondAttribute="bottom" id="HE6-Dv-ivz"/>
+                <constraint firstItem="9xY-Nv-VRk" firstAttribute="leading" secondItem="oVk-oc-N2q" secondAttribute="trailing" id="Hny-O0-SPz"/>
+                <constraint firstItem="oVk-oc-N2q" firstAttribute="leading" secondItem="r4Q-3V-8un" secondAttribute="leading" id="Mab-8A-yRW"/>
+                <constraint firstItem="9xY-Nv-VRk" firstAttribute="height" secondItem="oVk-oc-N2q" secondAttribute="height" id="SDc-ZU-XiE"/>
+                <constraint firstAttribute="trailing" secondItem="9xY-Nv-VRk" secondAttribute="trailing" constant="30" id="fFh-a6-bNk"/>
+                <constraint firstItem="oVk-oc-N2q" firstAttribute="top" secondItem="r4Q-3V-8un" secondAttribute="top" id="qfW-Ob-oUd"/>
+                <constraint firstItem="oVk-oc-N2q" firstAttribute="centerY" secondItem="r4Q-3V-8un" secondAttribute="centerY" id="sEi-zu-KQc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-299" y="73.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete" width="22" height="23"/>
+        <image name="download" width="22" height="22"/>
+    </resources>
+</document>
